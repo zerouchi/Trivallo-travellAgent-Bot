@@ -1,6 +1,6 @@
 import os 
 import openai
-import config
+#import config
 
 openai.api_key = "your api key"
 
