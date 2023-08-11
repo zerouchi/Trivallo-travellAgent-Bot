@@ -1,6 +1,6 @@
 import streamlit as st
 
-#import Brain as Brain
+import Brain as Brain
 from streamlit_option_menu import option_menu
 
 
@@ -37,22 +37,22 @@ def main():
         
         
         
-        #if st.button('Show Routes'):
+        if st.button('Show Routes'):
             
-                #if 'route' not in st.session_state:
-                  #st.session_state['route'] = Brain.routes(From,To)
+                if 'route' not in st.session_state:
+                  st.session_state['route'] = Brain.routes(From,To)
                 
-                # st.session_state['started'] = True
-                # st.session_state['From'] = From
-                # st.session_state['To'] = To
-                # st.write(st.session_state['route'])
+                st.session_state['started'] = True
+                st.session_state['From'] = From
+                st.session_state['To'] = To
+                st.write(st.session_state['route'])
                 
-        # if st.button('Go plan'):
+        if st.button('Go plan'):
             
-        #     if 'plan' not in st.session_state:
-        #      st.session_state['plan'] = Brain.plan(From,To,days)
+            if 'plan' not in st.session_state:
+             st.session_state['plan'] = Brain.plan(From,To,days)
             
-        #     st.write(st.session_state['plan'])
+            st.write(st.session_state['plan'])
        
         
         
